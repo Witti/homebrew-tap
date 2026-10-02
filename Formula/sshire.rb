@@ -2,20 +2,19 @@
 class Sshire < Formula
   desc "TUI SSH launcher with host management, tags, connection log and password storage"
   homepage "https://github.com/Witti/sshire"
-  version "0.1.1"
   license any_of: ["MIT", "Apache-2.0"]
 
   # Plain if-branches instead of on_macos/on_linux blocks: Homebrew style rules
   # do not allow url/sha256 inside on_* blocks.
   if OS.mac?
-    url "https://github.com/Witti/sshire/releases/download/v0.1.1/sshire-0.1.1-macos-universal.tar.gz"
-    sha256 "957e46d0fd0ccbbd0a1a3af43a009c3f0f1f9b208fbdcf5e77056f9ae321976b"
+    url "https://github.com/Witti/sshire/releases/download/v0.2.0/sshire-0.2.0-macos-universal.tar.gz"
+    sha256 "3da30c6920b67e320090101978c2e05030abc8725845a822b8eeb239b84e3c0a"
   elsif Hardware::CPU.arm?
-    url "https://github.com/Witti/sshire/releases/download/v0.1.1/sshire-0.1.1-linux-aarch64.tar.gz"
-    sha256 "b657c557fe62e92651449ea5cfecb5344071412986e5942d7fea650a7a18b881"
+    url "https://github.com/Witti/sshire/releases/download/v0.2.0/sshire-0.2.0-linux-aarch64.tar.gz"
+    sha256 "c81fc1f117305562150eff7100cf6920c881f5bdb07f9983c0a1951a7332fce3"
   else
-    url "https://github.com/Witti/sshire/releases/download/v0.1.1/sshire-0.1.1-linux-x86_64.tar.gz"
-    sha256 "7c9d2741360982dacc8728728d4a64157aee8c74f7748c15a7b984cd1f882267"
+    url "https://github.com/Witti/sshire/releases/download/v0.2.0/sshire-0.2.0-linux-x86_64.tar.gz"
+    sha256 "9339f677871c58541e2a6504ef931d5ad9361b92189c5ec9ae79d2d71bc00158"
   end
 
   def install
